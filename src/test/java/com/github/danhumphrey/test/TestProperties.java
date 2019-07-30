@@ -7,6 +7,7 @@ import java.util.Properties;
 public class TestProperties {
 
 	public static final String BROWSER;
+	public static final boolean HEADLESS;
 
 	static {
 
@@ -19,6 +20,7 @@ public class TestProperties {
 			e.printStackTrace();
 		}
 
+		HEADLESS = Boolean.parseBoolean(props.getProperty("headless"));
 		BROWSER = props.getProperty("browser");
 
 	}
